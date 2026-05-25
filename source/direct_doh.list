@@ -1,0 +1,11 @@
+# direct_doh.list — 自用 DoH 上游域名（domain text → direct_doh.mrs）
+#
+# 必须在 Merge.yaml rules 段**最顶部**引用（先于 RULE-SET,category_doh,REJECT）。
+# 自用上游同时也在 category_doh 名单内，respect-rules:true 下 mihomo 拨自身上游
+# 会过 rules，先放行后再 REJECT 其余防自伤瘫痪。完整原理见 docs/lessons/10。
+#
+# 这里**只放 DoH 上游**两条；其余公共直连（镜像/CDN）拆到 direct_domain.list，
+# 跟 airport.mrs 一起放机场段、不放最顶部。
+
++.doh.pub
++.dns.alidns.com

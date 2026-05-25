@@ -1,0 +1,13 @@
+# direct_domain.list — 公共直连域名（镜像 + 海外可达 CDN，domain text → direct_domain.mrs）
+#
+# 在 Merge.yaml rules 段跟 airport.mrs 一起放机场段，不放顶部。
+# DoH 自用上游拆到 direct_doh.list（顶部，先于 category_doh REJECT）。
+
+# === rule-providers 镜像源（必须直连，否则拉本仓自身 mrs 死循环）===
++.gh-proxy.com
+
+# === 海外可达 CDN / 镜像（国内直连可达，省机场流量）===
++.hf-mirror.com                # Hugging Face 国内镜像
++.xethub.hf.co                 # HF 大文件 CloudFront 端点
++.cn.archive.ubuntu.com        # Ubuntu 中国官方镜像
++.xtom.com.hk                  # xtom HK 镜像服务

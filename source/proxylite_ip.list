@@ -1,0 +1,14 @@
+# proxylite_ip.list — 强制代理白名单·IP 部分（ipcidr text → proxylite_ip.mrs）
+#
+# 来源：fork 自 qichiyu/rule/main/rules/proxy.list 的 IP-CIDR 部分。
+# 配套：proxylite_domain.list (域名部分)。
+# rule-providers 引用时建议加 no-resolve。
+
+# === 国外 DNS（IP 形式，防 DNS 端点被 IP-CIDR 路由白名单绕过）===
+8.8.8.8/32              # Google Public DNS
+8.8.4.4/32              # Google Public DNS 备
+1.1.1.1/32              # Cloudflare DNS
+1.0.0.1/32              # Cloudflare DNS 备
+185.222.222.222/32      # DNS.SB
+208.67.222.222/32       # OpenDNS
+208.67.220.220/32       # OpenDNS 备

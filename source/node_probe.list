@@ -1,0 +1,12 @@
+# node_probe.list — 节点测试补充域名（domain text → node_probe.mrs）
+#
+# 补充 v2fly/domain-list-community 的 category-ip-geo-detect 漏收的探针域名。
+# 审计 trail（2026-05-23 真机验证）：
+#   v2fly 列表已含：ipwho.is / geojs.io / ip2c.org / ipinfo.io / ip-api.com
+#   本地手动补充：ping0.cc / ippure.com / browserleaks.com
+# 注意 +.ippure.com 已匹配 my.ippure.com 全子域，不要重复写 my.ippure.com。
+# Jina Reader (r.jina.ai) 不加 —— 它是代抓服务，跟节点切换无关。
+
++.ping0.cc
++.ippure.com
++.browserleaks.com

@@ -1,0 +1,26 @@
+# airport.list — 机场节点域名（domain text → airport.mrs）
+#
+# 全部用 wildcard 覆盖任意 TLD（机场常换 TLD），不维护精确 SUFFIX。
+# 语义：mihomo clash wildcard `*` = 严格单 label；`+.X.*` 覆盖任意层子域 + 单段 TLD，
+# `+.X.*.*` 补双段 TLD（如 .com.tw / .com.hk）。真实 ccTLD 最多 2 段，两行收口。
+# 机制级证据：mihomo component/trie/domain_test.go TestTrie_Wildcard。
+
+# === SoftCloud（机场号 9ss）===
++.9ss.*
++.9ss.*.*
+
+# === 花云 / Hua Cloud ===
++.huacloud.*
++.huacloud.*.*
+
+# === 花云英文别名 ===
++.flowercloud.*
++.flowercloud.*.*
+
+# === 花云 apt 风格命名 ===
++.apt-hcloud.*
++.apt-hcloud.*.*
+
+# === 花云 API CDN 端点（xmancdn）===
++.xmancdn.*
++.xmancdn.*.*

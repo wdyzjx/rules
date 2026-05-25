@@ -1,0 +1,24 @@
+# proxylite_domain.list — 强制代理白名单·域名部分（domain text → proxylite_domain.mrs）
+#
+# 来源：fork 自 qichiyu/rule/main/rules/proxy.list 的 DOMAIN-SUFFIX + DOMAIN-KEYWORD 部分。
+# 原 license 见 README attribution。
+# 配套：proxylite_ip.list (IP-CIDR 部分)。
+
+# === 仓库标识 ===
++.qichiyu.com
+
+# === 国外 DoH / DNS 端点（必须强制代理，防 ISP DNS 投毒）===
++.dns.google
++.1dot1dot1dot1.cloudflare-dns.com
++.cloudflare-dns.com
++.dot.sb
++.doh.dns.sb
++.hk-hkg.doh.sb
++.dns.umbrella.com
++.dns.quad9.net
++.doh.opendns.com
+
+# === Google CDN 反向 DNS 特征（原 DOMAIN-KEYWORD,1e100 转 wildcard）===
+# 1e100.net 是 Google 数据中心的反向 DNS 后缀，常见形态 xxx.xxx.1e100.net
++.1e100.*
++.1e100.*.*

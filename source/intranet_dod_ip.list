@@ -1,0 +1,8 @@
+# intranet_dod_ip.list — 内网 IP 段（ipcidr text → intranet_dod_ip.mrs）
+#
+# 30/8 + 11/8 是 US DoD 历史分配但未实际启用的段，
+# 部分企业内网（如阿里）复用此空间作为内部网段。
+# rule-providers 引用时建议加 no-resolve（IP 段不需 DNS 反解）。
+
+30.0.0.0/8
+11.0.0.0/8

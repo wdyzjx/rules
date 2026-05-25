@@ -1,0 +1,20 @@
+# intranet_dod.list — 内网 + 阿里相关域名（domain text → intranet_dod.mrs）
+#
+# 命名 "intranet_dod" 取自配套 intranet_dod_ip.list（30.0.0.0/8 + 11.0.0.0/8 是 US DoD
+# 未启用段被某些内网复用）。本文件统一用 wildcard 覆盖任意 TLD。
+
+# === 高德 ===
++.amap-inc.*
++.amap-inc.*.*
+
+# === 蚂蚁集团 ===
++.antgroup-inc.*
++.antgroup-inc.*.*
+
+# === 全途 ===
++.alltuu.*
++.alltuu.*.*
+
+# === 阿里云全家桶（aliyuncs，原 KEYWORD 转 wildcard）===
++.aliyuncs.*
++.aliyuncs.*.*

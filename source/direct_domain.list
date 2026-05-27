@@ -1,7 +1,10 @@
 # direct_domain.list — 公共直连域名（镜像 + 海外可达 CDN，domain text → direct_domain.mrs）
 #
 # 在 Merge.yaml rules 段跟 airport.mrs 一起放机场段，不放顶部。
-# DoH 自用上游拆到 direct_doh.list（顶部，先于 category_doh REJECT）。
+# 注：DoH 自用上游 + gh-proxy 镜像本应在此一并直连，但 rule-provider 异步加载会
+# 导致启动期 0 命中→自伤死锁，已下沉到 Merge.yaml 顶部 inline DOMAIN-SUFFIX。
+# 本文件里 +.gh-proxy.com 保留作冗余兜底，给开源用户提供完整覆盖（其他 mrs 镜像
+# 也走 gh-proxy）。详见 clash_air_config docs/lessons/10 §衍生。
 
 # === rule-providers 镜像源（必须直连，否则拉本仓自身 mrs 死循环）===
 +.gh-proxy.com
